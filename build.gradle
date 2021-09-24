@@ -1,0 +1,27 @@
+
+plugins {
+	id 'java-library'
+	id 'org.sonatype.gradle.plugins.scan' version '1.2.0'
+}
+
+group = 'org.demo'
+version = '1.0'
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+    implementation "joda-time:joda-time:2.2"
+    testImplementation "junit:junit:4.12"
+}
+
+nexusIQScan {
+  username = 'admin'
+  password = 'admin123'
+  serverUrl = 'http://localhost:8070'
+  applicationId = 'simple-gradle'
+  stage = 'build'  
+  allConfigurations = true 
+}
+
