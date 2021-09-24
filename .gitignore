@@ -40,6 +40,7 @@ hs_err_pid*
 #####
 
 .vscode
+bin
 
 nb-configuration.xml
 nbactions.xml
